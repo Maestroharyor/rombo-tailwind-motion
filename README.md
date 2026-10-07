@@ -34,3 +34,15 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Tailwind CSS v4
+
+This project uses Tailwind CSS v4, configured in `src/app/globals.css` rather than a JS config file. Plugins load with `@plugin`:
+
+```css
+@import 'tailwindcss';
+@plugin 'tailwindcss-motion';
+@plugin 'tailwindcss-animate';
+```
+
+To keep a v3-style `tailwind.config.ts` instead, load it from the stylesheet with `@config '../../tailwind.config.ts';`.
